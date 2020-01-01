@@ -688,6 +688,9 @@ video::-webkit-media-controls {
 
 </style>
 <script>
+    if (typeof window.orientation !== 'undefined') {
+        window.location.href("mobile.html");
+    }
 
 var rellax = new Rellax('.rellax');
     
