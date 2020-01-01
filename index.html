@@ -53,13 +53,13 @@
             </div>
             <div id="fade--top" align="center"></div>
             <img id="logo" src="https://static.tumblr.com/4qlzhzr/D17q1k67l/carnival_cover_waiver_header1.png" style="width: 80vw; padding-top: 4vw;" class="rellax" data-rellax-speed="6">
-
+            
             <div align="center" style="font-family: 'Pragati Narrow'; font-weight: 600; font-size: 5vw; margin-top: -7vw">
 
                 Waiver Portal
 
             </div>
-
+            
             <div class="scene scene--card" style="position: static; top: 10;" align="center">
 
                 <div class="card" onclick="start()">
@@ -96,10 +96,10 @@
                 <table style="width: 100%; height: 10px; overflow: visible">
                     <tr>
                         <td style="width: 15%; height: 10px; overflow: visible;" align="right">
-
+                            
                             <div class="tile" style="position: relative;">
                                 <div style="position: fixed; height: 100vh; width: 4vw; z-index: 20;">
-
+                                    
                                     <table style="width: 100%" cellspacing="0" cellpadding="0">
                                         <tr>
                                             <td style="height: 5vw;">
@@ -113,14 +113,14 @@
                                             </td>
                                         </tr>
                                     </table>
-
+                                    
                                 </div>
                                 <div style="position: fixed; height: 5.2vw; width: 4vw; z-index: 20; border-left: 0.4vw solid black; margin-left: -0.6vw;">
-
+                                
                                 </div>
                             </div>
-
-
+                            
+    
                         </td>
                         <td style="width: 85%">
                         </td>
@@ -171,11 +171,11 @@
                                 <div class="scene card__face--front" style="position: absolute; top: 10px; z-index: -1; transform: rotate(2deg);">
 
                                 </div>
-
+                                
                                 <div style="margin-top: 2vw; opacity: 0.3; font-size: 2.5vw;" align="center">
 
                                                 (Flip a card to continue)
-
+                
                                 </div>
 
                             </div>
@@ -188,7 +188,7 @@
                 </table>
 
             </div>
-
+            
             <div class="section" id="video_section">
 
                             <table style="width: 100%; height: 100vh;">
@@ -224,7 +224,7 @@
 
                                                         </i>
 
-
+                                                        
 
                                                     </td>
 
@@ -288,7 +288,7 @@
                             </table>
 
                         </div>
-
+            
         </div>
     </body>
 </html>
@@ -340,14 +340,14 @@
     }
     #video_section {
         display: none;
-    }
+    } 
     .scene {
       width: 20vw;
       height: 12vw;
       background: none;
       perspective: 600vw;
     }
-
+    
     .card, .card1, .card2 {
       position: relative;
       width: 100%;
@@ -357,15 +357,15 @@
       transform-origin: center right;
       transition: transform 0.3s;
       background: none;
-
+    
     }
-
+    
     .is-flipped {
       transform: translateX(-100%) rotateY(-180deg);
       background: none;
     }
-
-
+    
+    
     .card__face {
       position: absolute;
       width: 100%;
@@ -375,19 +375,19 @@
       font-weight: bold;
       backface-visibility: hidden;
     }
-
-
+    
+     
     .card__face--front {
       background: white;
       box-shadow: 0px 0px 10px #cccccc;
     }
-
+    
     .card__face--back {
       background: white;
       transform: rotateY(180deg);
       box-shadow: 0px 0px 10px #cccccc;
     }
-
+    
     .section {
         width: 70vw;
         padding-top: 40vh;
@@ -403,8 +403,8 @@
         position: absolute;
         top: -10vw;
     }
-
-
+    
+    
     .material-icons {
   font-family: 'Material Icons';
   font-weight: normal;
@@ -434,7 +434,7 @@
   font-feature-settings: 'liga';
 }
 .material-icons:hover {
-  color: #ff5fc2;
+  color: #ff5fc2; 
   transition: 0.2s;
   border-radius: 1vw;
 }
@@ -447,31 +447,39 @@ video::-webkit-media-controls {
                 padding-top: 10vh;
                 padding-bottom: 10vh;
             }
-        }
+}
+@media screen and (max-width: 1000px) {
+            #logo {
+                width: 800px;
+            }
+            .section {
+                width: 700px;
+            }
+}
 </style>
 <script>
 
 var rellax = new Rellax('.rellax');
-
+    
 var card = document.querySelector('.card');
 card.addEventListener( 'click', function() {
   card.classList.toggle('is-flipped');
 });
 var card1 = document.querySelector('.card1');
 card1.addEventListener( 'click', function() {
-  card1.classList.toggle('is-flipped');
+  card1.classList.toggle('is-flipped'); 
 });
 var card2 = document.querySelector('.card2');
 card2.addEventListener( 'click', function() {
   card2.classList.toggle('is-flipped');
 });
-
+  
 function start() {
-    setTimeout(function(){
-
+    setTimeout(function(){ 
+         
         document.getElementById("welcome").scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
-
-
+        
+        
     }, 1000);
 }
 
@@ -480,12 +488,12 @@ function showVideo() {
     scrollToVideo();
 }
 function scrollToVideo() {
-    setTimeout(function(){
-
+    setTimeout(function(){ 
+        
         document.getElementById("video_wrapper").scrollIntoView({behavior: "smooth", block: "end"});
         //window.scrollBy(0,1.25*window.innerHeight);
-
-
+        
+        
     }, 1000);
 }
 
